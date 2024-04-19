@@ -1,6 +1,6 @@
 import { Metadata } from "next";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
-
 export const metadata: Metadata = {
   title: "Authentication",
   description: "Authentication forms built using the components.",
@@ -41,13 +41,16 @@ export default function AuthenticationPage() {
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
             <h1 className="text-2xl font-semibold tracking-tight">
-              Create an account
+              Get Started
             </h1>
             <p className="text-sm text-muted-foreground">
-              Enter your email below to create your account
+              You will be prompted to sign in or sign up
             </p>
           </div>
-          <p className="px-8 text-center text-sm text-muted-foreground">
+          <Button>
+            <Link href="/dashboard">Go to Dashboard &rarr;</Link>
+          </Button>
+          {/* <p className="px-8 text-center text-sm text-muted-foreground">
             By clicking continue, you agree to our{" "}
             <Link
               href="/terms"
@@ -63,7 +66,7 @@ export default function AuthenticationPage() {
               Privacy Policy
             </Link>
             .
-          </p>
+          </p> */}
         </div>
       </div>
     </div>
